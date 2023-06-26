@@ -1,0 +1,22 @@
+{%  extends "base.html" %}
+{% block lista %}
+<li><a href="{{url_for('inicio')}}">Inicio</a></li>
+{% endblock %}
+
+{% block content %}
+<h1>Iniciar Sesión</h1>
+<hr/>
+<form action="{{ request_path }}" method="POST" class="container">
+    <label for="email">Correo Electrónico</label><br>
+    <input type="text" name="email" placeholder="Email"/><br> 
+    <label for="password">Contraseña</label><br>
+    <input type="password" name="password" placeholder="Password"/><br>
+    <label for="rol">Rol</label><br>
+    <select name="rol" id="rol">
+        <option value="preceptor">Preceptor</option>
+        <option value="padre">Padre</option>
+    </select>
+    <br>
+    <input type="submit" value="Confirmar"/><br> 
+ </form>
+{% endblock %}

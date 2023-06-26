@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width">
+ <title>Colegio San Miguel</title>
+ <link href="static/css/estilos.css" rel="stylesheet" type="text/css" />
+ 
+</head>
+<body>
+<header>
+ <h2>Colegio San Miguel</h2>
+</header>
+<section>
+ <nav>
+    <h3>Índice</h3>
+    <ul>
+    {% block lista %} {% endblock %}
+    </ul>
+ </nav> 
+
+{% block content %}{% endblock %}
+
+</section>
+<footer>
+    <p>Av. José Ignacio de la Roza Oeste 590, J5402DCS Rivadavia, San Juan - 02644260353</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{%  extends "base.html" %}
+{% block lista %}
+<li><a href="{{url_for('inicio')}}">Inicio</a></li>
+<li><a href="{{url_for('iniciar_sesion')}}">Iniciar Sesion</a></li>
+{% endblock %}
+
+{% block content %}
+<h1>Registro de asistencias de estudiantes</h1>
+<hr/>
+<p>Bienvenido, por favor inicie sesión para acceder al registro de asistencias </p>
+{% endblock %}

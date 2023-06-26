@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}Error{% endblock %}
+{% block lista %}
+<li><a href="{{url_for('iniciar_sesion')}}">Iniciar Sesion</a></li>
+{% endblock %}
+{% block content %}
+<h1> {{ error }} </h1>
+{% endblock %}

@@ -1,0 +1,23 @@
+{%  extends "base.html" %}
+{% block lista %}
+<li><a href="{{url_for('registrar_asistencia')}}">Registrar asistencia</a></li>
+<li><a href="{{url_for('mostrar_informe')}}">Mostrar Informe</a></li>
+<li><a href="{{url_for('cerrar_sesion')}}">Cerrar sesión</a></li>
+{% endblock %}
+
+{% block content %}
+<h1>Informe de asistencias</h1>
+<hr/>
+<article>
+    {% for asistencias in lista %}
+        <label for="estudiante"> {{ asistencias[0] }} </label> <br>
+        <label for="asistencia">Clases de aula presente: {{ asistencias[1] }}</label> <br>
+        <label for="asistencia">Clases de aula ausente justificadas: {{ asistencias[2] }}</label> <br>
+        <label for="asistencia">Clases de aula ausente injustificadas: {{ asistencias[3] }}</label> <br>
+        <label for="asistencia">Clases de educación física presente: {{ asistencias[4] }}</label> <br>
+        <label for="asistencia">Clases de educación física ausente justificadas: {{ asistencias[5] }}</label> <br>
+        <label for="asistencia">Clases de educación física ausente injustificadas: {{ asistencias[6] }}</label> <br>
+        <label for="asistencia">Cantidad total de inasistencias: {{ asistencias[7] }}</label> <br><br>
+    {% endfor %}
+ </article>
+{% endblock %}
